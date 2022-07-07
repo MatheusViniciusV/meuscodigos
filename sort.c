@@ -74,7 +74,7 @@ int main() {
     //liberando o espaço de memória alocado
     free(v);
     
-    getch();
+    getchar();
 
     return 0;
 }
