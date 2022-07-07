@@ -47,34 +47,37 @@ int main() {
 
     //Declaração de variáveis
     int i, num_componentes, *v;
-    
-    printf("Informe o numero de elementos a serem ordenados\n");
+
+    //Leitura do limite de elementos
+    printf("*********** ALGORITMO DE ORDENACAO: QUICK SORT ***********\n\n");
+    printf("Informe o numero de elementos a serem ordenados: ");
     scanf("%d", &num_componentes);
-    
+    system("cls");
 
     //Alocando dinamicamente o espaço necessário
     v = (int *) malloc(num_componentes * sizeof(int));
     
     //Armazenando os dados em um vetor
     for (i = 0; i < num_componentes; i++) {
-        printf("\nDigite o valor para a posicao %d do vetor: ", i + 1);
+        printf("Digite %d o valor: ", i + 1);
         scanf("%d", &v[i]);
+        system("cls");
     }
 
     //Invocando a função de ordenação
     quick_sort(v, 0, num_componentes - 1);
     
     //Percorrendo o vetor e imprimindo os valores
-    printf("\n*********** Valores ordenados do vetor ************\n\n");
+    printf("*********** Valores ordenados ***********\n\n");
     
     for (i = 0; i < num_componentes; i++) {
-        printf("%d\n", v[i]);
+        printf("%d ", v[i]);
     }
     
-    //liberando o espaço de memória alocado
+    //Liberando o espaço de memória alocado e finalizando programa
     free(v);
-    
-    getchar();
+    printf("\n\n");
+    system("pause");
 
     return 0;
 }
