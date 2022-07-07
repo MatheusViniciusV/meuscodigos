@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
 //================================================================
@@ -21,10 +22,14 @@ int main()
     algébrica anterior, é possível calcular este número como (1 + sqrt(5)) / 2.
     */ const double razaoaurea = 1.6180339887;
     
-    //Número máximo
+    //Leitura do número máximo
+    printf("*********** ALGORITMO GERADOR DA SEQUENCIA DE FIBONACCI ***********\n\n");
+    printf("Digite a quantidade de numeros para a Sequencia de Fibonacci: ");
     scanf("%d", &nMAX);
     
     //Primeiro valor imprimido
+    system("cls");
+    printf("*********** %d primeiros numeros da Sequencia de Fibonacci ***********\n\n", nMAX);
     printf("1 ");
 
     //Imprimir a Sequência de Fibonacci até o número máximo
@@ -36,6 +41,10 @@ int main()
         //Cálculo do número com a razão áurea e arredondamento para o inteiro mais próximo
         num = round(num * razaoaurea);
     }
+
+    //Finaliza o programa
+    printf("\n\n");
+    system("pause");
 
     return 0;
 }
