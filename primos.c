@@ -23,19 +23,21 @@ int main() {
         scanf("%d", &nMax);
     }
 
-    //Primeiro valor a ser imprimido
+    //Primeiras impressões
+    system("clear");
+    printf("*********** Lista de primos até %d ************\n\n", nMax);
     printf("2 ");
 
     //Verifica e imprime o número se é primo
-    for (i = 3; i <= nMax; i = 2 + i) {
+    for(int i = 3; i <= nMax; i = 2 + i) {
         
-        //Eliminando os números pares
-        if(i % 2) == 0)
+        //Eliminando os múltiplos de 3
+        if(i % 3 == 0 && i != 3)
             continue;
 
         //Cálculo e verificação
         verificacao = 1;
-        for (j = 3; j <= (unsigned int)sqrt((float)i) + 1; j++) {
+        for(int j = 3; j <= (unsigned int)sqrt((float)i)+1; j++) {
             if (i % j == 0) {
                 verificacao = 0;
                 break;
@@ -43,9 +45,13 @@ int main() {
         } 
         
         //Imprime o número na tela
-        if (ehPrimo)
+        if (verificacao)
             printf("%d ", i);
     }
+
+    //Finaliza o programa
+    printf("\n");
+    getchar();
 
     return 0;
 }
