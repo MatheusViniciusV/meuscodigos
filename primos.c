@@ -15,17 +15,18 @@ int main() {
     unsigned int nMax, i, j, verificacao;
 
     //Recebe o valor limite
+    printf("*********** ALGORITMO GERADOR DE NUMEROS PRIMOS ***********\n\n");
     printf("Digite o limite superior para os numeros primos (minimo 2): ");
     scanf("%d", &nMax);
     while (nMax < 2) {
-        system("clear");
+        system("cls");
         printf("Valor invalido\nDigite novamente o limite superior para os numeros primos (minimo 2): ");
         scanf("%d", &nMax);
     }
 
     //Primeiras impressões
-    system("clear");
-    printf("*********** Lista de primos até %d ************\n\n", nMax);
+    system("cls");
+    printf("*********** Lista de primos ate %d ***********\n\n", nMax);
     printf("2 ");
 
     //Verifica e imprime o número se é primo
@@ -50,8 +51,8 @@ int main() {
     }
 
     //Finaliza o programa
-    printf("\n");
-    getchar();
+    printf("\n\n");
+    system("pause");
 
     return 0;
 }
