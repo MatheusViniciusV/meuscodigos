@@ -10,3 +10,12 @@ int calcMDC(int a, int b) {
     
     return a;
 }
+
+int calcMMC(int a, int b) {
+    
+    int mmc, mdc = calcMDC(a, b);
+    
+    mmc = (a * b) / mdc;
+
+    return mmc;    
+}
