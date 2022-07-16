@@ -1,5 +1,5 @@
 void selectionSort (int *V, int n) {
-  int troca, menor;
+  int menor;
 
   for (int i = 0; i < n - 1; i++) {
     menor = i;
@@ -10,9 +10,9 @@ void selectionSort (int *V, int n) {
     }
 
     if (i != menor) {
-      troca = V[i];
+      int tmp = V[i];
       V[i] = V[menor];
-      V[menor] = troca; 
+      V[menor] = tmp; 
     }
   }
 }
