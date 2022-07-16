@@ -1,12 +1,16 @@
-void bubble_sort(int a[], int n) {
-    int i = 0, j = 0, tmp;
-    for (i = 0; i < n; i++) {
-        for (j = 0; j < n - i - 1; j++) {
-            if (a[j] > a[j + 1]) {
-                tmp = a[j];
-                a[j] = a[j + 1];
-                a[j + 1] = tmp;
-            }
-        }
+void bubble_sort (int *V, int n) {
+  bool troca;
+
+  do {
+    troca = false;
+
+    for (int i = 0; i < n - 1; i++) {
+      if (V[i] > V[i + 1]) {
+        int temp = V[i];
+        V[i] = V[i + 1];
+        V[i + 1] = temp;
+        troca = true;
+      }
     }
+  } while (troca);
 }
