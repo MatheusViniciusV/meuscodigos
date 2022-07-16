@@ -1,7 +1,5 @@
 int verificacao_primo (unsigned int n) {
     
-    //exige math.h
-    
     if (n < 2) return 0;
     if (n == 2) return(1);
     if (n % 2 == 0) return(0);
