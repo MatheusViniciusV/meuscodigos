@@ -1,11 +1,11 @@
 int calcMDC(int a, int b) {
 
-    int resto;
+    int r;
 
-    while (resto != 0) {
-        resto = a % b;
+    while (r != 0) {
+        r = a % b;
         a = b;
-        b = resto;
+        b = r;
     }
     
     return a;
