@@ -1,4 +1,4 @@
-void quick_sort(int *a, int left, int right) {
+void quick_sort(int a[], int left, int right) {
 
     int i, j, x, y;
      
