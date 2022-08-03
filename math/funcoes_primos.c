@@ -13,6 +13,8 @@ bool verificacao_primo (unsigned int n) {
 
 int prox_primo (unsigned int k) {
     
+    k++;
+    
     while(verificacao_primo(k) ==  false)
         k++;
     
