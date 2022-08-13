@@ -1,4 +1,5 @@
-int fatorial(int n) {
+long long int fatorial(int n) {
+    
     if(n == 0)
         return 1;
     else
