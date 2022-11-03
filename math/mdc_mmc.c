@@ -1,4 +1,4 @@
-int calcMDC(int a, int b) {
+int MDC(int a, int b) {
 
     int r;
 
@@ -11,7 +11,7 @@ int calcMDC(int a, int b) {
     return a;
 }
 
-int calcMMC(int a, int b) {
+int MMC(int a, int b) {
     
     int mmc, mdc = calcMDC(a, b);
     
