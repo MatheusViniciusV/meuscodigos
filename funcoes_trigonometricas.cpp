@@ -13,11 +13,9 @@ double taylor(double x, int i, double bg)  {
     
     x = fmod(x,M_PI*2); //Desconsidera as voltas inteiras no círculo trigonométrico
     
-    double r, t;
-    r = t = bg;
+    double r = bg, t = bg;
  
-    //Série de Taylor
-    for(; i < LIMIT; i += 2) 
+    for(; i < LIMIT; i += 2) //Série de Taylor
         r += t = -t*x*x/(i*(i-1));         
  
     return r; 
