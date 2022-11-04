@@ -8,14 +8,15 @@ double rad(int degrees) {
     return M_PI / 180 * degrees; 
 }
 
-//Série de Taylor na forma das funções seno e cosseno
+//Corpo comum das funções seno e cosseno
 double taylor(double x, int i, float bg)  { 
     
-    x = fmod(x,M_PI*2);
+    x = fmod(x,M_PI*2); //Desconsidera as voltas inteiras no círculo trigonométrico
     
     float r, t;
     r = t = bg;
  
+    //Série de Taylor
     for(; i < LIMIT; i += 2) 
         r += t = -t*x*x/(i*(i-1));         
  
