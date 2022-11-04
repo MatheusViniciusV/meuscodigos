@@ -9,11 +9,11 @@ double rad(int degrees) {
 }
 
 //Corpo comum das funções seno e cosseno
-double taylor(double x, int i, float bg)  { 
+double taylor(double x, int i, double bg)  { 
     
     x = fmod(x,M_PI*2); //Desconsidera as voltas inteiras no círculo trigonométrico
     
-    float r, t;
+    double r, t;
     r = t = bg;
  
     //Série de Taylor
