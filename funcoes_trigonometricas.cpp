@@ -1,17 +1,9 @@
 #include <cmath> //fmod
 
-//Controla o número de polinômios na aproximação
-#define LIMIT 25
+#define LIMIT 30 //Controla o número de polinômios na aproximação
 
-//Converte graus para radianos
-double rad(int degrees) {
-    return M_PI / 180 * degrees; 
-}
-
-//Corpo comum das funções seno e cosseno
+//Cálculo semelhante das funções seno e cosseno
 double taylor(double x, int i, double bg)  { 
-    
-    x = fmod(x,M_PI*2); //Desconsidera as voltas inteiras no círculo trigonométrico
     
     double r = bg, t = bg;
  
@@ -21,14 +13,16 @@ double taylor(double x, int i, double bg)  {
     return r; 
 }
 
-double sin(double x)  { 
+double seno(double x)  {
+    x = fmod(x,M_PI*2); //Desconsidera as voltas inteiras no círculo trigonométrico
     return taylor(x, 3, x); 
 }
 
-double cos(double x)  { 
+double cosseno(double x)  { 
+    x = fmod(x,M_PI*2);
     return taylor(x, 2, 1);
 }
 
-double tan(double x) {
+double tangente(double x) {
     return sin(x)/cos(x); //Identidade trigonométrica
 }
