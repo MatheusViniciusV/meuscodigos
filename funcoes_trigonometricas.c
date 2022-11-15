@@ -1,4 +1,4 @@
-include <cmath> //fmod
+#include <math.h> //fmod
 
 #define LIMITE 27 //Controla o número de polinômios nas aproximações
 
@@ -31,5 +31,16 @@ double cosseno(double x)  {
 }
 
 double tangente(double x) {
-    return seno(x)/cosseno(x); //Identidade trigonométrica
+    
+    x = fmod(x,M_PI*2);
+    
+    double rsen = x, tsen = x;
+    double rcos = 1, tcos = 1;
+    
+    for(int i = 2; i < LIMITE; i += 2) { //Cálculo do Seno e Cosseno
+        rsen += tsen = -tsen*x*x/((i+1)*i);
+        rcos += tcos = -tcos*x*x/(i*(i-1)); 
+    }
+    
+    return rsen/rcos; //Identidade trigonométrica
 }
