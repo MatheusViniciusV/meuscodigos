@@ -1,8 +1,8 @@
-# DETERMINANTE EM UMA MATRIZ QUADRADA
+# determinante.c
 
 ---
 
-## Explicação
+## Lógica do código
 
 Existem três operações básicas que podem ser aplicadas a
 qualquer tipo de sistema linear, sem alterar sua solução:
@@ -36,6 +36,8 @@ elementos da diagonal principal.
 <i>Observação: Todos os elementos da diagonal são não-nulos.</i>
 
 ## Glossário
+
+Em matemática, determinante é uma função matricial que associa a cada matriz quadrada um escalar, ou seja, é uma função que transforma uma matriz quadrada em um número real.
 
 Em álgebra linear, a diagonal principal de uma matriz A
 é a coleção das entradas Aᵢⱼ em que i é igual a j.
