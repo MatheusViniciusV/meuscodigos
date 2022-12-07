@@ -7,10 +7,10 @@ double det(double **mat, int N) {
     int j, i, k;
     double R;
     
-    //Criando cópia da matriz passada por referência
+    //Criando cÃ³pia da matriz passada por referÃªncia
     for(i = 0; i < N; i++)
-        for(j = 0; j < N; j++)
-            A[i][j] = mat[i][j];
+    for(j = 0; j < N; j++)
+        A[i][j] = mat[i][j];
     
     //Escalonamento da matriz
     for(i = 0; i < N; i++) {
@@ -22,8 +22,8 @@ double det(double **mat, int N) {
 	        R = A[j][i] / A[i][i];
 	        
 	         /*
-		    Seja L uma linha na matriz, é
-		    realizada a seguinte operação linear:
+			Seja L uma linha na matriz, Ã©
+		    realizada a seguinte operaÃ§Ã£o linear:
 		    
 		        Lj = Lj = R * Li;
 		    */
@@ -33,7 +33,7 @@ double det(double **mat, int N) {
 		}
     }
 
-    //Cálculo do determinante
+    //CÃ¡lculo do determinante
     for(i = 0; i < N; i++)
         det = det * A[i][i];
         
