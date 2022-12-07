@@ -29,7 +29,7 @@ double det(double **mat, int N) {
 		    */
 	   
 			for(k = 0; k < N; k++)
-			  	A[j][k] = A[j][k] - R * A[i][k];
+				A[j][k] = A[j][k] - R * A[i][k];
 		}
     }
 
