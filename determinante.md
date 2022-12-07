@@ -18,7 +18,7 @@ ser transformada numa matriz de forma escalonada, em que
 será possível calcular seu determinante pelo produto dos
 elementos da diagonal principal.
 
-## Exemplo:
+## Exemplo
 
     Matriz de entrada:
         a    b    c
@@ -35,7 +35,7 @@ elementos da diagonal principal.
         
 <i>Observação: Todos os elementos da diagonal são não-nulos.</i>
 
-## Glossário:
+## Glossário
 
 Em álgebra linear, a diagonal principal de uma matriz A
 é a coleção das entradas Aᵢⱼ em que i é igual a j.
