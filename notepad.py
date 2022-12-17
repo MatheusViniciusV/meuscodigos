@@ -21,7 +21,6 @@ class Notepad:
 
         self.root.title('Untitled - Notepad')
         self.root.geometry('400x400')
-        self.root.iconphoto(False, PhotoImage(file='icon.png'))
         self.root.resizable(False, False)
         self.root.config(menu=self.menuBar)
         self.root.grid_rowconfigure(0, weight=1)
