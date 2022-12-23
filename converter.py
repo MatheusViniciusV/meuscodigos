@@ -15,6 +15,7 @@ class Converter:
     __label_f = Label(__root)
     __entry_c = Entry(__root)
     __entry_f = Entry(__root)
+    __clear = Button(__root)
     __button = Button(__root)
 
     def __init__(self):
@@ -59,8 +60,19 @@ class Converter:
         self.__entry_f.config(width=10)
         self.__entry_f.grid(column=1, row=5, padx=10, pady=5)
 
+        self.__clear.config(command=self.__funcclear, width=8, height=1, text='Clear')
+        self.__clear.grid(column=0, row=6, padx=5, pady=5)
+
         self.__button.config(command=self.__func, width=8, height=1, text='Converter')
         self.__button.grid(column=1, row=6, padx=5, pady=5)
+
+    def __funcclear(self):
+        self.__entry_kmh.delete(0, END)
+        self.__entry_ms.delete(0, END)
+        self.__entry_kg.delete(0, END)
+        self.__entry_lb.delete(0, END)
+        self.__entry_c.delete(0, END)
+        self.__entry_f.delete(0, END)
 
     def __func(self):
 
