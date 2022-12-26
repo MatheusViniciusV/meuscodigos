@@ -104,7 +104,7 @@ class Converter:
             self.__entry_lb.insert(0, val)
         elif lb and not kg:
             val = float(lb)
-            val = val * 0.453592
+            val = val / 2.2046
             val = str(val)
             self.__entry_lb.delete(0, END)
             self.__entry_kg.insert(0, val)
