@@ -25,13 +25,13 @@ def gerar_texto(arr_frases):
         
         while(cont < num_frases): #adiciona as frases
             
-            texto = texto + lorem[index]
+            texto += lorem[index]
             
-            cont = cont + 1
-            index = index + 1 
-            index = index % 10
+            cont += 1
+            index = (index + 1) % 10 
+            index %= 10
             
-        texto = texto + '\n'
+        texto += '\n'
         
     return texto
     
