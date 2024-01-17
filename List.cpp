@@ -1,5 +1,6 @@
 #include <cstddef>
 #include <stdexcept>
+#include <iostream>
 
 #define COEFICIENT 1.5
 
@@ -8,17 +9,28 @@ class List
 {
 	private:
 		T* data;
-		int size;
+		size_t size;
 		int reserve;
 	public:
+	    List();
 		List(int);
 		~List();
+		void add(T);
 		void add(int, T);
 		T remove(int);
 		T get(int);
 		void set(int, T);
-		int len();
+		size_t len();
+		void display();
 };
+
+template <class T>
+List<T>::List()
+{
+	this->size = 0;
+	this->reserve = 10;
+	this->data = new T[10];
+}
 
 template <class T>
 List<T>::List(int initial)
@@ -35,6 +47,12 @@ List<T>::~List()
 }
 
 template <class T>
+void List<T>::add(T element)
+{
+	this->add(this->size, element);
+}
+
+template <class T>
 void List<T>::add(int position, T element)
 {
 	if(position > this->size || position < 0)
@@ -44,7 +62,7 @@ void List<T>::add(int position, T element)
 	
 	if(this->size < this->reserve)
 	{
-		for(int i = this->size; i > position; i--)
+		for(size_t i = this->size; i > position; i--)
 		{
 			this->data[i] = this->data[i - 1];
 		}
@@ -122,7 +140,24 @@ void List<T>::set(int position, T element)
 }
 
 template <class T>
-int List<T>::len()
+size_t List<T>::len()
 {
 	return this->size;
+}
+
+template <class T>
+void List<T>::display()
+{
+    std::cout << '[';
+
+    for (size_t i = 0; i < this->size; ++i)
+    {
+        std::cout << this->data[i];
+    
+        if (i < this->size - 1) {
+            std::cout << ", ";
+        }
+    }
+    
+    std::cout << ']';
 }
