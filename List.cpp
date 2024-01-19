@@ -12,7 +12,7 @@ class List
 		size_t size;
 		int reserve;
 	public:
-	    List();
+		List();
 		List(int);
 		~List();
 		void add(T);
