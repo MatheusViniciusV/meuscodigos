@@ -1,4 +1,4 @@
-//Objetivo: Busca em um grafo todos os nós acessíveis de um nó raiz
+//Objetivo: Busca em um grafo todos os nós acessíveis partindo de um nó raiz
 //Complexidade: O(V + A)
 
 const int MAX = 1e3+10;
