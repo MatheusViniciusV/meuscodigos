@@ -9,7 +9,7 @@ struct Aresta {
 typedef vector<Aresta> Grafo;
 
 Grafo original, AGM;
-int* pai; //possui tamanho V e inicialmente cada vértice é o seu próprio pai (pai[i] = i)
+int* pai; 
 
 int encontrar_conjunto(int i) {
     return (i != pai[i]) ? i = encontrar_conjunto(pai[i]) : i;
