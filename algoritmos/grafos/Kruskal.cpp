@@ -1,3 +1,6 @@
+//Objetivo: Busca uma árvore geradora mínima para um grafo conexo com pesos.
+//Complexidade: O(E * logV)
+
 struct Aresta {
     int origem, destino, peso;
     inline bool operator<(Aresta outra) { return peso < outra.peso; }
