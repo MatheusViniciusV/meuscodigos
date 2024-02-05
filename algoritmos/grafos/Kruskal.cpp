@@ -1,5 +1,5 @@
 //Objetivo: Busca uma árvore geradora mínima para um grafo conexo com pesos.
-//Complexidade: O(E * logV)
+//Complexidade: O(A * logV)
 
 struct Aresta {
     int origem, destino, peso;
