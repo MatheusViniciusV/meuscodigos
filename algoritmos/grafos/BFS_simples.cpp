@@ -1,6 +1,6 @@
 vector<vector<int>> adj;
 
-int bfs(int A, int B)
+int BFS(int A, int B)
 {
     vector<bool> vis(vertices, false);
     queue<pair<int, int>> fila;
