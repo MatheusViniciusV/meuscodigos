@@ -14,7 +14,7 @@ typedef long long ll;
 /*struct Estrutura {
     int x, y, z;
     inline bool operator<(const Estrutura& other) const { return x < other.x; }
-}*/
+};*/
 
 //vector<vector<int>> matriz(M, vector<int>(N, 0));
 
