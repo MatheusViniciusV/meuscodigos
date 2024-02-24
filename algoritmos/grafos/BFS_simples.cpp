@@ -1,28 +1,23 @@
-vector<vector<int>> adj;
-
 int BFS(int A, int B)
 {
-    vector<bool> vis(vertices, false);
-    queue<pair<int, int>> fila;
+    vector<int> distancia(T + L + 1, -1);
+    queue<int> fila;
 
-    fila.push({A, 0});
-    vis[A] = true;
+    fila.push(A);
+    distancia[A] = 0;
 
-    while (!fila.empty())
+    while (not fila.empty())
     {
-        int atual = fila.front().first;
-        int distancia = fila.front().second;
+        int atual = fila.front();
         fila.pop();
 
-        if (atual == B)
-            return distancia;
-
-        for (int vizinho : adj[atual])
+        for (int vizinho : adjacencias[atual])
         {
-            if (!vis[vizinho])
+            if (distancia[vizinho] == -1)
             {
-                fila.push({vizinho, distancia + 1});
-                vis[vizinho] = true;
+                distancia[vizinho] = distancia[atual] + 1;
+                if(vizinho == D) return distancia[vizinho];
+                fila.push(vizinho);
             }
         }
     }
