@@ -16,7 +16,7 @@ int BFS(int A, int B)
             if (distancia[vizinho] == -1)
             {
                 distancia[vizinho] = distancia[atual] + 1;
-                if(vizinho == D) return distancia[vizinho];
+                if(vizinho == B) return distancia[vizinho];
                 fila.push(vizinho);
             }
         }
