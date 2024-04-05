@@ -9,7 +9,7 @@ int kadane() {
   int max_soma = -INF;
   int soma = 0;
 
-  for(auto e : bingos) {
+  for(auto e : arr) {
     soma += e;
     max_soma = max(max_soma, soma);
     soma = max(soma, 0);
