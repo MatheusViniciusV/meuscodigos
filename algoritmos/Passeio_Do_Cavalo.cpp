@@ -1,3 +1,6 @@
+//Objetivo: Busca um caminho em que o cavalo passe por todo tabuleiro sem repetir casas
+//Complexidade: Não é eficiente, serve apenas de exemplo de algoritmo backtracking
+
 #include <bits/stdc++.h>
 
 using namespace std;
