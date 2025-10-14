@@ -29,9 +29,9 @@ int dijkstra(vector<vector<pair<int, int>>>& grafo, int n, int origem, int desti
                 int custo = adjacencia.second;
                 
                 if(distancia[vizinho] > (distancia[atual] + custo)) {
-			distancia[vizinho] = distancia[atual] + custo;
-			fila.push({-distancia[vizinho], vizinho});
-		}
+					distancia[vizinho] = distancia[atual] + custo;
+					fila.push({-distancia[vizinho], vizinho});
+				}
             }
         }
     }
